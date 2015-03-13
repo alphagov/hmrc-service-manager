@@ -1,3 +1,7 @@
+(This is a temporary fork of https://github.com/hmrc/service-manager while we do some work on it)
+
+---
+
 Service Manager
 ===================
 
