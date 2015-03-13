@@ -61,13 +61,10 @@ class SmApplication():
         self.services = SmApplication._read_json_config(self, "services.json")
         self.profiles = SmApplication._read_json_config(self, "profiles.json")
         self.config = SmApplication._read_json_config(self, "config.json")
-
-        self.templates = SmApplication._read_json_config(self, "templates.json")
-        self.merge_template_config()
-
-        self.nexus_repo_host = SmApplication._read_json_config(self, "config.json")["nexus"]["host"]
-        self.play_extraction_dir = SmApplication._read_json_config(self, "config.json")["playExtractionDir"]
         self.service_mappings = SmApplication._read_json_config(self, "service_mappings.json")
+        self.templates = SmApplication._read_json_config(self, "templates.json")
+        
+        self.merge_template_config()
         self.features = features
 
         for profile in self.profiles:

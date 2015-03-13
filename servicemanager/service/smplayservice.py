@@ -161,7 +161,7 @@ class SmPlayService(SmJvmService):
 
     @staticmethod
     def unzipped_dir_path(context, location):
-        return context.application.play_extraction_dir + location + "_" + context.instance_id
+        return context.application.config["playExtractionDir"] + location + "_" + context.instance_id
 
     def __init__(self, context, service_name):
         SmJvmService.__init__(self, context, service_name, "play")

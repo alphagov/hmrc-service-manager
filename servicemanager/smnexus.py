@@ -148,7 +148,7 @@ class SmNexus():
 
     def download_jar_if_necessary(self, run_from, version):
         binary = self.context.service_data(self.service_name)["binary"]
-        nexus_host = self.context.application.nexus_repo_host
+        nexus_host = self.context.application.config["nexus"]["host"]
         artifact = binary["artifact"]
         filename = self.context.get_jar_filename(self.service_name, run_from)
         microservice_target_path = self.context.get_microservice_target_path(self.service_name)
